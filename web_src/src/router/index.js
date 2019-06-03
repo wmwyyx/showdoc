@@ -131,5 +131,6 @@ export default new Router({
       name: 'TeamItem',
       component: TeamItem
     },
-  ]
+  ],
+  //mode: 'history',
 })

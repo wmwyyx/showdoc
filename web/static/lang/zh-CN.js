@@ -88,6 +88,9 @@ exports.default = {
     'select_cat_2' : '选择二级目录：',
     'select_cat_3' : '选择三级目录：',
     'begin_export' : '开始导出',
+    'begin_export1' : '导出word',
+    'begin_export2' : '导出html',
+    'begin_export3' : '导出md',
 
     //item/setting
     'base_info' : '基础信息',

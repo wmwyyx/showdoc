@@ -21,7 +21,9 @@
 
 
                <el-form-item label="" >
-                <el-button type="primary" style="width:100%;" @click="onSubmit" >{{$t('begin_export')}}</el-button>
+                <el-button type="primary" style="" @click="onSubmit('word')" >{{$t('begin_export1')}}</el-button>
+                <el-button type="primary" style="" @click="onSubmit('html')" >{{$t('begin_export2')}}</el-button>
+                <el-button type="primary" style="" @click="onSubmit('md')" >{{$t('begin_export3')}}</el-button>
               </el-form-item>
 
               <el-form-item label=""  >
@@ -111,11 +113,17 @@ export default {
           console.log(error);
         });
     },
-    onSubmit() {
+    onSubmit(type) {
         if (this.export_type ==1 ) {
           this.cat_id = ''
         };
-        var url = DocConfig.server+'/api/export/word&item_id='+this.item_id+'&cat_id='+this.cat_id ;
+        if(type=='word'){
+	        var url = DocConfig.server+'/api/export/word&item_id='+this.item_id+'&cat_id='+this.cat_id ;
+        }else if(type == 'html'){
+	        var url = DocConfig.server+'/api/export/html&item_id='+this.item_id+'&cat_id='+this.cat_id ;
+        }else{
+	        var url = DocConfig.server+'/api/export/md&item_id='+this.item_id+'&cat_id='+this.cat_id ;
+        }
         window.location.href = url;
       },
     goback(){
@@ -145,7 +153,7 @@ export default {
 
 .center-card{
   text-align: center;
-  width: 350px;
+  width: 450px;
 }
 
 </style>

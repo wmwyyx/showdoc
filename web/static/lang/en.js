@@ -85,6 +85,9 @@ exports.default = {
     'select_cat_2' : 'Select catalog level2',
     'select_cat_3' : 'Select catalog level3',
     'begin_export' : 'Begin to export',
+    'begin_export1' : 'export word',
+    'begin_export2' : 'export html',
+    'begin_export3' : 'export md',
 
     //item/setting
     'base_info' : 'Base info',
